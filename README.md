@@ -61,3 +61,10 @@ At this point, have made a library of cropped image sequences from the tracks (u
 **MACanalysis_TrackVideos_tau_fitting.m:** After eliminating false tracks (and perhaps concatonating different experiments), the mean height vectors from each growing pore sequence are used to calculate time for pore growth. The mean height vectors are filtered (to account for image noise) and normalised between 0 and 1 (arbitrary units). Each normalised height vector is then fit with a sinusoidal fitting equation to calculate the width of the transition from background lipid bilayer to saturated mean height (pore completion). If the width of this transition (and hence time of reaction coordinate) is found to be longer than the image sequence, or t_0 is negative, these are considered bad fits and the data is removed. Histograms of time for individual pores to form are then produced, along with videos of their pore growth and concomitant mean height profiles. The mean time for individual pore formation is also reported.
 
 NB: This script can either load a data structure straight from 3 (MACanalysis_TrackVideos_tau_fitting.m), or, from 4 (MACanalysis_TrackVideos_concatonate.m). The user must input whether this is a concatonated data set or not.(Concatonated_data_set=0 or 1).
+
+## Authors
+
+George J Stanley and Bart W Hoogenboom
+
+## Acknowledgements
+
