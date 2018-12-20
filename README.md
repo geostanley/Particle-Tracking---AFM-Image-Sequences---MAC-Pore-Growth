@@ -68,3 +68,4 @@ George J Stanley and Bart W Hoogenboom
 
 ## Acknowledgements
 
+Acknowledgements to Adi Natan for FastPeakFind; Jean-Yves Tinevez for nearestneighborlinker, hungarianlinker, and simpletracker; Yi Cao for munkres; Jonathan Lanset for linspecer; and Edward Abraham for dashline.
