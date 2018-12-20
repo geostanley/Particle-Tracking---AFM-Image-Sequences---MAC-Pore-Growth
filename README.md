@@ -26,9 +26,9 @@ The 5 scripts run as follows:
 
 The script shows two video outputs. The first circles found protrusions that are similar to the template; the second shows the tracks. If these video outputs are not showing the correct results, the parameters must be adjusted and the script run again. These parameters include: the template size and the threshold value (for the 2D cross-correlation) used to find similar features; and the max_linking_distance, max_gap_closing, and mintracklength parameters used for building the tracks. 
 
-Inputs: .spm files, imaging parameters (image size and line rate etc - see preamble).
+**Inputs:** .spm files, imaging parameters (image size and line rate etc - see preamble).
 
-Outputs: MATLAB data structure with flattened image sequence, imaging parameters, tracking table, and tracking parameters.
+**Outputs:** MATLAB data structure with flattened image sequence, imaging parameters, tracking table, and tracking parameters.
 
 ## Script 2: MACanalysis_loadtracks_createTrackVideos.m
 
@@ -36,25 +36,25 @@ Outputs: MATLAB data structure with flattened image sequence, imaging parameters
 
 At this point, have made a library of cropped image sequences from the tracks (using the preframe and postframe parameters and subsequent reorganisation of the track table), and have calcualted the mean height profile for each cropped image sequence. This information is saved into another MATLAB data structure.
 
-Input: MATLAB data structure produced from 'MACanalysis_loadfiles_findtracks.m'.
+**Input:** MATLAB data structure produced from 'MACanalysis_loadfiles_findtracks.m'.
 
-Outputs: MATLAB data structure containing the cropped image sequences (Cropped_pore_growth_cell), the mean height arrays for each sequence, the template size, and the imaging frame rate (for producing time vectors etc).
+**Outputs:** MATLAB data structure containing the cropped image sequences (Cropped_pore_growth_cell), the mean height arrays for each sequence, the template size, and the imaging frame rate (for producing time vectors etc).
 
 ## Script 3: MACanalysis_eliminateFalsetracks.m
 
 **MACanalysis_eliminateFalsetracks.m:** It must be remembered that the ultimate aim of these scripts is to calculate the time taken for individual MAC pores to grow, and that the tracking of these pores is done towards this aim. However, tracks cannot distinguish between complete MACs that have drifted into the field-of-view during imaging, and MAC pores that have oligomerised within the field-of-view during the experiment. This is the reason for saving out all the MP4 files produced in the previous script. These must now be reviewed, and  the track numbers corresponding to real pore growth events noted down. These numbers must be entered into the array "True_tracks_idx" within script 3 (MACanalysis_eliminateFalsetracks.m). The script will then load the MATLAB data structure from the previous script, but only save out the information for the track numbers specified in "True_tracks_idx". These are again saved out into a new data structure.
 
-Inputs: MATLAB data structure produced from 'MACanalysis_loadtracks_createTrackVideos.m', and desired track numbers (entered into the "True_tracks_idx" array).
+**Inputs:** MATLAB data structure produced from 'MACanalysis_loadtracks_createTrackVideos.m', and desired track numbers (entered into the "True_tracks_idx" array).
 
-Output: MATLAB data structure.
+**Output:** MATLAB data structure.
 
 ## Script 4: MACanalysis_TrackVideos_concatonate.m
 
 **MACanalysis_TrackVideos_concatonate.m:** Before calculating the time for each pore growth event (and plotting histograms etc), it is possible to concatonate the results from several independent experiments (if desired - this step is not necessary and can be skipped). Simply input the directories and data structure filenames of the experiments to be aggregated.
 
-Inputs: Directories and filenames of data structures to be concatonated.
+**Inputs:** Directories and filenames of data structures to be concatonated.
 
-Output: Concatonated data structure.
+**Output:** Concatonated data structure.
 
 ## Script 5: MACanalysis_TrackVideos_tau_fitting.m
 
