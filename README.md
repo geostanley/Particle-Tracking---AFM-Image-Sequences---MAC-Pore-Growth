@@ -2,7 +2,7 @@
 
 The scripts (and corresponding functions) within this project are designed to analyse high-speed AFM image  sequences (.spm files). More specifically, they are designed to find features within an image sequence that resemble a template image, to build tracks of these features as they diffuse across the image sequences with time, and to crop out individual image sequences of these diffusing features, using the coordinates from the found tracks. 
 
-In this study, these scripts are used to count the number of membrane attack complex (MAC) pores on a supported lipid bilayer within each image, to build tracks of these MAC pores as they grow, to crop an image sequence of each found growing pore, and finally, to calculate how long it takes for each individual pore to grow.
+In this study, these scripts are used to count the number of membrane attack complex (MAC) pores on a supported lipid bilayer within each image, to build tracks of these MAC pores as they grow and diffuse across the bilayer, to crop an image sequence of each found growing pore, and finally, to calculate how long it takes for each individual pore to grow.
 
 The results from this analysis can be found here: https://www.biorxiv.org/content/early/2018/11/16/472274
 
