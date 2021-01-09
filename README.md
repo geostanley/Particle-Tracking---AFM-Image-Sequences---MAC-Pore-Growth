@@ -6,7 +6,7 @@ In this study, these scripts are used to count the number of membrane attack com
 
 It should be noted that these scripts load AFM images produced from Bruker systems (.spm files). The Nanoscope MATLAB toolbox is therefore required to run these scripts (NSMatlabUtilities).
 
-The results from this analysis can be found here: https://www.biorxiv.org/content/early/2018/11/16/472274
+The results from this analysis can be found here: https://www.nature.com/articles/s41467-019-10058-7
 
 There are five main scripts:
 
